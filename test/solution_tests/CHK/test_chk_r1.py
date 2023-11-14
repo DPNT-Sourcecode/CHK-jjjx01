@@ -1,7 +1,8 @@
 from lib.solutions.CHK import checkout_solution
 
 
-class CheckTest:
-    def test_check(self):
+class TestSum():
+    def test_sum(self):
         assert checkout_solution.checkout('AABCB') == 165
         assert checkout_solution.checkout('AABCBE') == -1
+

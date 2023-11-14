@@ -17,17 +17,19 @@ def checkout(skus):
         else:
             basket_dict[c] = 1
 
-    if basket_dict['A'] // 3 >= 1:
-        price += (basket_dict['A'] // 3) * 130
-        price += (basket_dict['A'] % 3) * 50
-    else:
-        price += basket_dict['A'] * 50
+    if 'A' in basket_dict:
+        if basket_dict['A'] // 3 >= 1:
+            price += (basket_dict['A'] // 3) * 130
+            price += (basket_dict['A'] % 3) * 50
+        else:
+            price += basket_dict['A'] * 50
 
-    if basket_dict['B'] // 2 >= 1:
-        price += (basket_dict['B'] // 2) * 45
-        price += (basket_dict['B'] % 2) * 30
-    else:
-        price += basket_dict['B'] * 30
+    if 'B' in basket_dict:
+        if basket_dict['B'] // 2 >= 1:
+            price += (basket_dict['B'] // 2) * 45
+            price += (basket_dict['B'] % 2) * 30
+        else:
+            price += basket_dict['B'] * 30
 
     if 'C' in basket_dict.keys():
         price += basket_dict['C'] * 20
@@ -35,5 +37,6 @@ def checkout(skus):
         price += basket_dict['D'] * 15
 
     return price
+
 
 
