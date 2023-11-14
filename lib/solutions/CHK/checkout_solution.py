@@ -24,7 +24,7 @@ def checkout(skus):
         items['F'] -= items['F'] // 3
 
     if items['R'] // 3 > 0:
-        items['Q'] -= items['Q'] // 3
+        items['Q'] -= items['R'] // 3
         if items['Q'] < 0:
             items['Q'] = 0
 
@@ -64,6 +64,7 @@ def checkout(skus):
     price += items['Z'] * 50
 
     return price
+
 
 
 
