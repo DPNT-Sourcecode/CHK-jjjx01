@@ -7,6 +7,7 @@ def checkout(skus):
         return 0
 
     items = {c: 0 for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
+
     price = 0
 
     for c in skus:
@@ -68,5 +69,6 @@ def checkout(skus):
     price += items['Z'] * 21
 
     return price
+
 
 
