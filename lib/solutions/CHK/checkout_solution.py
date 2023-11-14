@@ -1,13 +1,13 @@
-
+from collections import defaultdict
 
 # noinspection PyUnusedLocal
 # skus = unicode string
 def checkout(skus):
     if len(skus) == 0:
         return 0
-    items = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0, 'F': 0}
+
+    items = {c: 0 for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
     price = 0
-    basket_dict = {}
 
     for c in skus:
         if c not in items:
@@ -64,5 +64,6 @@ def checkout(skus):
     price += items['Z'] * 50
 
     return price
+
 
 
