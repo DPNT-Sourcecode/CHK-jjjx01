@@ -32,5 +32,3 @@ def checkout(skus):
 
     return price_A + price_B + price_C + price_D + price_E + price_F
 
-
-
