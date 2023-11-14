@@ -4,4 +4,5 @@ from lib.solutions.CHK import checkout_solution
 class TestSum():
     def test_sum(self):
         assert checkout_solution.checkout('AABCB') == 165
-        assert checkout_solution.checkout('AABCBE') == -1
+        assert checkout_solution.checkout('') == 0
+
