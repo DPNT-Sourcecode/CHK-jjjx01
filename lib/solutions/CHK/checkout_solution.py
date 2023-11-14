@@ -7,7 +7,7 @@ def checkout(skus):
         return 0
 
     items = {c: 0 for c in 'ABCDEFGHIJKLMNOPQRSTUVWXYZ'}
-
+    items['GROUP'] = 0
     price = 0
 
     for c in skus:
@@ -15,6 +15,9 @@ def checkout(skus):
             return -1
         else:
             items[c] += 1
+            if c in ['S', 'T', 'X', 'Y', 'Z']:
+                items['GROUP'] += 1
+
 
     if items['E'] // 2 > 0:
         items['B'] -= items['E'] // 2
@@ -37,9 +40,14 @@ def checkout(skus):
     if items['U'] // 4 > 0:
         items['U'] -= items['U'] // 4
 
-    {S: 2, T: 1, X: 3, Y: 2, Z: 0}
+    items['GROUP'] = items['GROUP'] // 3
 
-    if sum([val for val in items['S', 'T', 'X', 'Y', 'Z']])
+    for group in range(items['GROUP']):
+        count = 0
+        for c in ['Z', 'S', 'T', 'Y', 'X']:
+            while items[c] > 0 and count < 3:
+                items[c] -= 1
+                count += 1
 
     price += (items['A'] // 5) * 200 + ((items['A'] % 5) // 3) * 130 + ((items['A'] % 5) % 3) * 50
     price += (items['B'] // 2) * 45 + (items['B'] % 2) * 30
@@ -67,8 +75,10 @@ def checkout(skus):
     price += items['X'] * 17
     price += items['Y'] * 20
     price += items['Z'] * 21
+    price += items['GROUP'] * 45
 
     return price
+
 
 
 
