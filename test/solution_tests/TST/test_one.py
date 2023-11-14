@@ -9,5 +9,3 @@ class TestSum():
         # assert checkout_solution.checkout('AABCBFFAADFAEEFF') == 385
         # assert checkout_solution.checkout('HHHHHHKKMNNNPPPPPQQQRRRUUUUU') == 895
         assert checkout_solution.checkout('ZSSTXXX') == 107
-
-
