@@ -4,7 +4,7 @@
 # skus = unicode string
 def checkout(skus):
     if len(skus) == 0:
-        return -1
+        return 0
     legal_inputs = {'A', 'B', 'C', 'D'}
     price = 0
     basket_dict = {}
@@ -37,6 +37,7 @@ def checkout(skus):
         price += basket_dict['D'] * 15
 
     return price
+
 
 
 
