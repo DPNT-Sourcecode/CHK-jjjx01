@@ -5,36 +5,27 @@
 def checkout(skus):
     if len(skus) == 0:
         return 0
-    legal_inputs = {'A', 'B', 'C', 'D'}
+    items = {'A': 0, 'B': 0, 'C': 0, 'D': 0, 'E': 0}
     price = 0
     basket_dict = {}
 
     for c in skus:
-        if c not in legal_inputs:
+        if c not in items:
             return -1
-        if c in basket_dict.keys():
-            basket_dict[c] += 1
         else:
-            basket_dict[c] = 1
+            items[c] += 1
 
-    if 'A' in basket_dict:
-        if basket_dict['A'] // 3 >= 1:
-            price += (basket_dict['A'] // 3) * 130
-            price += (basket_dict['A'] % 3) * 50
-        else:
-            price += basket_dict['A'] * 50
+    if items['E'] // 2 > 0:
+        items['B'] -= items['E'] // 2
+        if items['B'] < 0:
+            items['B'] = 0
 
-    if 'B' in basket_dict:
-        if basket_dict['B'] // 2 >= 1:
-            price += (basket_dict['B'] // 2) * 45
-            price += (basket_dict['B'] % 2) * 30
-        else:
-            price += basket_dict['B'] * 30
+    price_A = (items['A'] // 5) * 200 + ((items['A'] % 5) // 3) * 130 + ((items['A'] % 5) % 3) * 50
+    price_B = (items['B'] // 2) * 45 + (items['B'] % 2) * 30
+    price_C = items['C'] * 20
+    price_D = items['D'] * 15
+    price_E = items['E'] * 40
 
-    if 'C' in basket_dict.keys():
-        price += basket_dict['C'] * 20
-    if 'D' in basket_dict.keys():
-        price += basket_dict['D'] * 15
+    return price_A + price_B + price_C + price_D + price_E
 
-    return price
 
