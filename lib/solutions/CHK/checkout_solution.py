@@ -23,12 +23,46 @@ def checkout(skus):
     if items['F'] // 3 > 0:
         items['F'] -= items['F'] // 3
 
-    price_A = (items['A'] // 5) * 200 + ((items['A'] % 5) // 3) * 130 + ((items['A'] % 5) % 3) * 50
-    price_B = (items['B'] // 2) * 45 + (items['B'] % 2) * 30
-    price_C = items['C'] * 20
-    price_D = items['D'] * 15
-    price_E = items['E'] * 40
-    price_F = items['F'] * 10
+    if items['R'] // 3 > 0:
+        items['Q'] -= items['Q'] // 3
+        if items['Q'] < 0:
+            items['Q'] = 0
 
-    return price_A + price_B + price_C + price_D + price_E + price_F
+    if items['N'] // 3 > 0:
+        items['M'] -= items['N'] // 3
+        if items['M'] < 0:
+            items['M'] = 0
+
+    if items['U'] // 4 > 0:
+        items['U'] -= items['U'] // 4
+
+    price += (items['A'] // 5) * 200 + ((items['A'] % 5) // 3) * 130 + ((items['A'] % 5) % 3) * 50
+    price += (items['B'] // 2) * 45 + (items['B'] % 2) * 30
+    price += items['C'] * 20
+    price += items['D'] * 15
+    price += items['E'] * 40
+    price += items['F'] * 10
+    price += items['G'] * 20
+    price += (items['H'] // 10) * 50 + ((items['H'] % 10) // 5) * 45 + ((items['H'] % 10) % 5) * 10
+    price += items['I'] * 35
+    price += items['J'] * 60
+    price += (items['K'] // 2) * 150 + (items['K'] % 2) * 80
+    price += items['L'] * 90
+    price += items['M'] * 15
+    price += items['N'] * 40
+    price += items['O'] * 10
+    price += (items['P'] // 5) * 200 + (items['P'] % 5) * 50
+    price += (items['Q'] // 3) * 80 + (items['P'] % 3) * 30
+    price += items['R'] * 50
+    price += items['S'] * 30
+    price += items['T'] * 20
+    price += items['U'] * 40
+    price += (items['V'] // 3) * 130 + ((items['V'] % 3) // 2) * 90 + ((items['V'] % 5) % 3) * 50
+    price += items['W'] * 20
+    price += items['X'] * 90
+    price += items['Y'] * 10
+    price += items['Z'] * 50
+
+    return price
+
 
