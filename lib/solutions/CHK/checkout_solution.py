@@ -57,13 +57,14 @@ def checkout(skus):
     price += items['S'] * 30
     price += items['T'] * 20
     price += items['U'] * 40
-    price += (items['V'] // 3) * 130 + ((items['V'] % 3) // 2) * 90 + ((items['V'] % 5) % 3) * 50
+    price += (items['V'] // 3) * 130 + ((items['V'] % 3) // 2) * 90 + ((items['V'] % 3) % 2) * 50
     price += items['W'] * 20
     price += items['X'] * 90
     price += items['Y'] * 10
     price += items['Z'] * 50
 
     return price
+
 
 
 
