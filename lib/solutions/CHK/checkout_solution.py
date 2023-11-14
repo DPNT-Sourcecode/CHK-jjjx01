@@ -36,6 +36,10 @@ def checkout(skus):
     if items['U'] // 4 > 0:
         items['U'] -= items['U'] // 4
 
+    {S: 2, T: 1, X: 3, Y: 2, Z: 0}
+
+    if sum([val for val in items['S', 'T', 'X', 'Y', 'Z']])
+
     price += (items['A'] // 5) * 200 + ((items['A'] % 5) // 3) * 130 + ((items['A'] % 5) % 3) * 50
     price += (items['B'] // 2) * 45 + (items['B'] % 2) * 30
     price += items['C'] * 20
@@ -46,7 +50,7 @@ def checkout(skus):
     price += (items['H'] // 10) * 80 + ((items['H'] % 10) // 5) * 45 + ((items['H'] % 10) % 5) * 10
     price += items['I'] * 35
     price += items['J'] * 60
-    price += (items['K'] // 2) * 150 + (items['K'] % 2) * 80
+    price += (items['K'] // 2) * 120 + (items['K'] % 2) * 70
     price += items['L'] * 90
     price += items['M'] * 15
     price += items['N'] * 40
@@ -54,14 +58,15 @@ def checkout(skus):
     price += (items['P'] // 5) * 200 + (items['P'] % 5) * 50
     price += (items['Q'] // 3) * 80 + (items['Q'] % 3) * 30
     price += items['R'] * 50
-    price += items['S'] * 30
+    price += items['S'] * 20
     price += items['T'] * 20
     price += items['U'] * 40
     price += (items['V'] // 3) * 130 + ((items['V'] % 3) // 2) * 90 + ((items['V'] % 3) % 2) * 50
     price += items['W'] * 20
-    price += items['X'] * 90
-    price += items['Y'] * 10
-    price += items['Z'] * 50
+    price += items['X'] * 17
+    price += items['Y'] * 20
+    price += items['Z'] * 21
 
     return price
+
 
